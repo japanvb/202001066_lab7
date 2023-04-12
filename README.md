@@ -318,78 +318,9 @@ Note: Test cases TC1 to TC10 covers all identified equivalence classes.<br>
 
 
 ![Final](https://user-images.githubusercontent.com/62084382/231538537-89c3769c-1ee2-436b-8f1e-de80bd7ed551.png)
+
+**Test Cases Code**
 ```
-package lab_7;
-public class unittesting {
-	public int linearSearch(int v, int a[])
-	{
-		int i = 0;
-		while (i < a.length)
-		{
-			if (a[i] == v)
-				return(i);
-			i++;
-		}
-		return (-1);
-	}
-	public int countItem(int v, int a[])
-	{
-		int count = 0;
-		for (int i = 0; i < a.length; i++)
-		{
-			if (a[i] == v)
-			count++;
-	
-		}
-		return count;
-	}
-	
-	public int binarySearch(int v, int a[])
-	{
-		int lo,mid,hi;
-		lo = 0;
-		hi = a.length-1;
-		while (lo <= hi)
-		{
-			mid = (lo+hi)/2;
-			if (v == a[mid])
-				return (mid);
-			else if (v < a[mid])
-				hi = mid-1;
-			else
-				lo = mid+1;
-		
-		}
-		return(-1);
-	}
-	
-	public static String triangle(int a, int b, int c)
-	{
-		if (a >= b+c || b >= a+c || c >= a+b)
-			return ("Incorrect input");
-		if (a == b && b == c)
-			return ("Equal");
-		if (a == b || a == c || b == c)
-			return ("Isosceles");
-		return ("Scalene");
-	}
-	
-	public static boolean prefix(String s1, String s2)
-	{
-		if (s1.length() > s2.length())
-		{
-			return false;
-		}
-		for (int i = 0; i < s1.length(); i++)
-		{
-			if (s1.charAt(i) != s2.charAt(i))
-		{
-				return false;
-		}
-		}
-		return true;
-	}
-}
 package lab_7;
 import static org.junit.Assert.*;
 import org.junit.Test;
